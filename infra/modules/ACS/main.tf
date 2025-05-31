@@ -18,7 +18,7 @@ resource "azurerm_app_configuration" "appcs" {
 # Private Endpoint for App Configuration Service
 # -----------------------------------------------------------------------------
 
-resource "azurerm_subnet" "kv" {
+resource "azurerm_subnet" "appcs" {
   name = "${var.system_component_name}-AppConfig"
   resource_group_name  = var.vnet_resource_group
   virtual_network_name = var.vnet_name
